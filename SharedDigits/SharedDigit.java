@@ -6,14 +6,16 @@ public class SharedDigit {
             return false;
         }
         
+		int placeholder = b;
         int y = 0;
         int x = 0;
         
         while(a>0){
             y=a%10;
             System.out.println(y);
-            a/=10;
             
+			b = placeholder;
+			
             while(b>0){
                 x=b%10;
                 System.out.println("x is "+x);
@@ -24,6 +26,8 @@ public class SharedDigit {
 			    }
 				
             }
+			
+            a/=10;
             
         }
         
