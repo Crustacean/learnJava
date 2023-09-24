@@ -12,7 +12,7 @@ public class SharedDigit {
         
         while(a>0){
             y=a%10;
-            System.out.println(y);
+            System.out.println("When 'y' is: "+y);
             
 			b = placeholder;
 			
