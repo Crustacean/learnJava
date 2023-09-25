@@ -7,10 +7,10 @@ public class NumberToWords {
         }
         
         int control = reverse(number);
-		System.out.println(number);
+		int count = getDigitCount(number);
         int x = 0;
         
-        while(control>0){
+        while(count>0){
             
             x = control%10;
             
@@ -35,21 +35,27 @@ public class NumberToWords {
             System.out.print(wordOfNumber+" ");
             
             control/=10;
+			count--;
             
         }
         
     }
     
     public static int getDigitCount(int number){
-        
-        if(number<0){
+		
+		if(number < 0){
             return -1;
+        }else if(number == 0){
+            return 1;
+        }		
+		
+        int count = 0;
+		
+        while(number > 0){
+            count++;
+            number /= 10;
         }
-        
-        String stringOfNumber = ""+number;
-        int x = stringOfNumber.length();
-        
-        return x;
+        return count;
         
     }
     
@@ -79,9 +85,22 @@ public class NumberToWords {
 	
 	public static void main(String[] args){
 		
-		numberToWords(123);
+		numberToWords(37683);
+		System.out.println("\n");
 		numberToWords(1010);
+		System.out.println("\n");
 		numberToWords(1000);
+		System.out.println("\n");
+		numberToWords(777);
+		System.out.println("\n");
+		numberToWords(0);
+		System.out.println("\n");
+		numberToWords(1);
+		System.out.println("\n");
+		numberToWords(20);
+		System.out.println("\n");
+		numberToWords(02);
+		System.out.println("\n");
 		
 	}	
     
