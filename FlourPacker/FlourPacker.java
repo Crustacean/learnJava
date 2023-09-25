@@ -5,25 +5,41 @@ public class FlourPacker {
         int sizeOfBigCount = 5*bigCount;
         int sizeOfSmallCount = 1*smallCount;
         int totalCount = 0;
-        
-        while(totalCount<goal){
-            if((sizeOfBigCount>0) && ((totalCount + 5) < goal)){
-                totalCount+=5;
-                sizeOfBigCount-=5;
-            }else if((sizeOfSmallCount>0) && (totalCount + 1)<goal){
-                totalCount++;
-                sizeOfSmallCount--;
+		int goalControl = goal;
+		
+        if(totalCount<goal){
+            while(sizeOfBigCount>0){
+				if((totalCount + 5) <= goalControl){
+					totalCount+=5;
+					goal-=5;
+				}
+				
+				sizeOfBigCount-=5;
+				
+				if((totalCount + 5) > goalControl){
+					break;
+				}
             }
         }
 		
-		System.out.println("The goal was: "+goal);
-		System.out.println("Achieved: "+totalCount);
+		if(totalCount<goalControl){
+			while(sizeOfSmallCount>0){
+				if((totalCount + 1)<=goalControl){
+					totalCount++;
+					goal--;
+				}
+				
+				sizeOfSmallCount--;
+				
+				if((totalCount + 1)>goalControl){
+					break;
+				}
+            }
+		}
 		
-		
-		
-		if(totalCount<goal){
+		if(totalCount<goalControl){
 			return false;
-		}else if(totalCount==goal){
+		}else if(totalCount==goalControl){
 			return true;
 		}
 		
@@ -33,8 +49,7 @@ public class FlourPacker {
 	
 	public static void main(String[] args){
 		
-		System.out.println(canPack (3, 2, 9));
-		System.out.println(canPack (1, 0, 5));
+		System.out.println(canPack (1, 0, 4));
 		
 	}
 	
