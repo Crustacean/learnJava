@@ -7,14 +7,14 @@ public class NumberToWords {
         }
         
         int control = reverse(number);
+		System.out.println(number);
         int x = 0;
-        String wordOfNumber = "";
         
-        while(control<0){
+        while(control>0){
             
             x = control%10;
             
-            wordOfNumber = switch(x){
+            String wordOfNumber = switch(x){
             
                 case 1 -> "One";
                 case 2 -> "Two";
@@ -32,7 +32,7 @@ public class NumberToWords {
                 
             };
             
-            System.out.println(wordOfNumber);
+            System.out.print(wordOfNumber+" ");
             
             control/=10;
             
@@ -46,8 +46,8 @@ public class NumberToWords {
             return -1;
         }
         
-        String number = ""+number;
-        int x = number.lenght();
+        String stringOfNumber = ""+number;
+        int x = stringOfNumber.length();
         
         return x;
         
@@ -57,9 +57,10 @@ public class NumberToWords {
         
         int reversedNumber = 0;
         
-        while(number<0){
-            reversedNumber=Integer.valueOf(String.valueOf(number%10));
-            number/+10;
+        while(number>0){
+			int remainder = number%10;
+			reversedNumber = reversedNumber*10 + remainder;
+            number/=10;
         }
         
         return reversedNumber;
