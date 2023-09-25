@@ -57,10 +57,20 @@ public class NumberToWords {
         
         int reversedNumber = 0;
         
+        int control = number;
+        
+        if(number<0){
+            number*=-1;
+        }
+        
         while(number>0){
 			int remainder = number%10;
 			reversedNumber = reversedNumber*10 + remainder;
             number/=10;
+        }
+        
+        if(control<0){
+            reversedNumber*=-1;
         }
         
         return reversedNumber;
