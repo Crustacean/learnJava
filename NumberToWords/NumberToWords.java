@@ -6,21 +6,63 @@ public class NumberToWords {
             System.out.println("Invalid Value");
         }
         
-        switch(number){
+        int control = reverse(number);
+        int x = 0;
+        String wordOfNumber = "";
+        
+        while(control<0){
             
-            case 1 -> System.out.println("One");
-            case 2 -> System.out.println("Two");
-            case 3 -> System.out.println("Three");
-            case 4 -> System.out.println("Four");
-            case 5 -> System.out.println("Five");
-            case 6 -> System.out.println("Six");
-            case 7 -> System.out.println("Seven");
-            case 8 -> System.out.println("Eight");
-            case 9 -> System.out.println("Nine");
-            case 0 -> System.out.println("Zero");
-            default -> System.out.println("Invalid Value");
+            x = control%10;
+            
+            wordOfNumber = switch(x){
+            
+                case 1 -> "One";
+                case 2 -> "Two";
+                case 3 -> "Three";
+                case 4 -> "Four";
+                case 5 -> "Five";
+                case 6 -> "Six";
+                case 7 -> "Seven";
+                case 8 -> "Eight";
+                case 9 -> "Nine";
+                case 0 -> "Zero";
+                default -> {
+                    yield "Invalid Value";
+                }
+                
+            };
+            
+            System.out.println(wordOfNumber);
+            
+            control/=10;
             
         }
+        
+    }
+    
+    public static int getDigitCount(int number){
+        
+        if(number<0){
+            return -1;
+        }
+        
+        String number = ""+number;
+        int x = number.lenght();
+        
+        return x;
+        
+    }
+    
+    public static int reverse(int number){
+        
+        int reversedNumber = 0;
+        
+        while(number<0){
+            reversedNumber=Integer.valueOf(String.valueOf(number%10));
+            number/+10;
+        }
+        
+        return reversedNumber;
         
     }
 	
