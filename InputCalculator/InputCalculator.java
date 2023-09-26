@@ -7,7 +7,7 @@ public class InputCalculator {
 		Scanner sc = new Scanner(System.in);
 		boolean test = true;
 		int input = 0;
-		double avg = 0L;
+		int avg = 0;
 		int sum = 0;
 		int i=0;
 		
@@ -16,15 +16,13 @@ public class InputCalculator {
 			try{
 				
 				input = Integer.parseInt(sc.nextLine());
-				
 				sum+=input;
-				System.out.println("cycle is "+i);
-				System.out.println("total is "+sum);
 				i++;
 				
 			}catch(NumberFormatException e){
-				System.out.println("cycle is "+i);
-				avg = (double)Math.round((sum/i));
+				double median = (double)sum/i;
+				System.out.println(median);
+				avg = (int)Math.round(median);
 				System.out.println("SUM = "+sum+" AVG = "+avg);
 				test = false;
 				break;				
