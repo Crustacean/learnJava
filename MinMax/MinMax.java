@@ -40,7 +40,11 @@ public class MinMax{
 			
 		}while(isNumber);
 		
-		System.out.println("Min: "+min+", Max: "+max);
+		if(i>1){
+			System.out.println("Min: "+min+", Max: "+max);
+		}else{
+			System.out.println("No valid data entered.");
+		}
 		
 	}
 	
