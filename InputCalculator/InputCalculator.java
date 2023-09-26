@@ -21,7 +21,6 @@ public class InputCalculator {
 				
 			}catch(NumberFormatException e){
 				double median = (double)sum/i;
-				System.out.println(median);
 				avg = (int)Math.round(median);
 				System.out.println("SUM = "+sum+" AVG = "+avg);
 				test = false;
