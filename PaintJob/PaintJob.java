@@ -6,10 +6,20 @@ public class PaintJob {
 			return -1;
 		}
 		
+		double wallArea = width*height;
+		double numberOfBuckets = wallArea/areaPerBucket;
 		
-		
+		return Math.round(numberOfBuckets-extraBuckets);
 		
 	}
-    
+	
+	
+	public static void main(String[] args){
+		
+		getBucketCount(3.4, 2.1, 1.5, 2);
+		getBucketCount(2.75, 3.25, 2.5, 1); 
+		getBucketCount(-3.4, 2.1, 1.5, 2);
+		
+	}    
     
 }
