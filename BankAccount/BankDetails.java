@@ -77,7 +77,7 @@ public class BankDetails{
 		}else if(accountNumber == 22435L){
 			this.accountBalance = 1_000_000.34d;
 		}else{
-			this.accountBalance = 0; 
+			this.accountBalance = 0;
 		}
 		
 		System.out.println("Account-holder's name: "+custName+", Email Address: "+custEmail+", Phone Number: "+custPhone+", Account number: "+accountNumber+", Account balance: "+accountBalance);
@@ -86,14 +86,32 @@ public class BankDetails{
 	
 	public void withdraw(){
 		
+		Scanner sc = new Scanner(System.in);
+		int withdrawalAmount = 0;
+		
 		if(accountBalance>0.0){
 			System.out.println(custName+", please go ahead and withdraw");
+			
+			System.out.println("Enter an amount to withdraw: ");
+			
+			try{
+				withdrawalAmount=Integer.parseInt(sc.next());
+				
+				if(withdrawalAmount<=accountBalance){
+					System.out.println("You are going to withdraw: "+withdrawalAmount);
+					System.out.println("Dispensing $"+withdrawalAmount+"...");
+					System.out.println("New balance is "+(accountBalance-withdrawalAmount));
+				}else{
+					throw new NumberFormatException();
+				}				
+				
+			}catch(NumberFormatException e){
+				System.out.println("Wrong amount. Please try again.");
+			}
 			
 		}else{
 			System.out.println(custName+", you do not have sufficient balance. Please topup and return.");
 		}
-		
-		
 		
 	}
 	
