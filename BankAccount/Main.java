@@ -4,6 +4,8 @@ public class Main{
 		
 		BankDetails bankDetails = new BankDetails();
 		
+		bankDetails.setAccountBalance(1);
+		
 		bankDetails.deposit();
 		bankDetails.withdraw();
 		
