@@ -50,9 +50,9 @@ public class Person {
             return firstName;
         }else if(firstName.trim().isEmpty()){
             return lastName;
+        }else{
+            return firstName+" "+lastName;
         }
-        
-        return "";
         
     }
     
