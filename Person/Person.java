@@ -43,12 +43,15 @@ public class Person {
     }
     
     public String getFullName(){
+		
+		boolean isFirstNameEmpty = firstName==null || firstName.trim().isEmpty();
+		boolean isLastNameEmpty = lastName==null || lastName.trim().isEmpty();
         
-        if(firstName==null && firstName.trim().isEmpty() && lastName==null && lastName.trim().isEmpty()){
+        if(isFirstNameEmpty && isLastNameEmpty){
             return "";
-        }else if(lastName.trim().isEmpty()){
+        }else if(isLastNameEmpty){
             return firstName;
-        }else if(firstName.trim().isEmpty()){
+        }else if(isFirstNameEmpty){
             return lastName;
         }else{
             return firstName+" "+lastName;
