@@ -1,4 +1,4 @@
-public Customer{
+public class Customer{
 	
 	private String name;
 	private int creditLimit;
@@ -22,7 +22,7 @@ public Customer{
 	
 	public String email(){ return email; }
 	
-	public vod getCustomerDetails(){
+	public void getCustomerDetails(){
 		
 		System.out.println("Name: "+name);
 		System.out.println("Credit Limit: "+creditLimit);
