@@ -5,7 +5,11 @@ public class Customer{
 	private String email;
 	
 	public Customer(){
-		System.out.println("Initializing constructor...");
+		this("Nobody", "No email");
+	}
+	
+	public Customer(String name, String email){
+		this(name, 500, email);
 	}
 	
 	public Customer(String name, int creditLimit, String email){
@@ -20,7 +24,7 @@ public class Customer{
 	
 	public int getCreditLimit(){ return creditLimit; }
 	
-	public String email(){ return email; }
+	public String getEmail(){ return email; }
 	
 	public void getCustomerDetails(){
 		
@@ -29,6 +33,5 @@ public class Customer{
 		System.out.println("Email Address: "+email);
 		
 	}
-	
 	
 }
