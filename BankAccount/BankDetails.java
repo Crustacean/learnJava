@@ -102,11 +102,11 @@ public class BankDetails{
 					System.out.println("Dispensing $"+withdrawalAmount+"...");
 					System.out.println("New balance is "+(accountBalance-withdrawalAmount));
 				}else{
-					throw new NumberFormatException();
+					throw new IllegalArgumentException();
 				}				
 				
-			}catch(NumberFormatException e){
-				System.out.println("Wrong amount. Please try again.");
+			}catch(IllegalArgumentException e){
+				System.out.println("Amount exceeds balance. Please try again.");
 			}
 			
 		}else{
