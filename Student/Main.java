@@ -9,20 +9,18 @@ public class Main{
 		String studentClassList;
 		Scanner sc = new Scanner(System.in);
 		
-		int i=1;
-		
-		while(i<=5){
+		for(int i=1;i<=5;i++){
 			
-			System.out.print("Enter student's name: ");
+			StudentRecord student = new StudentRecord("IMTJO-"+i, sc.nextLine(), sc.nextLine(), sc.nextLine());
+			
+			/*System.out.print("Enter student's name: ");
 			studentName = sc.nextLine();
 			System.out.print("Enter student's Date of Birth: ");
 			studentDateOfBirth = sc.nextLine();
 			System.out.print("Enter student's class list: ");
 			studentClassList=sc.nextLine();
 			
-			StudentRecord student = new StudentRecord("IMTJO-"+i, studentName, studentDateOfBirth, studentClassList);
-			
-			i++;
+			Student student = new Student("IMTJO-"+i, studentName, studentDateOfBirth, studentClassList);*/
 			
 			System.out.println(student);
 			
