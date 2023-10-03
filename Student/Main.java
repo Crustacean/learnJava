@@ -20,7 +20,7 @@ public class Main{
 			System.out.print("Enter student's class list: ");
 			studentClassList=sc.nextLine();
 			
-			Student student = new Student("IMTJO-"+i, studentName, studentDateOfBirth, studentClassList);
+			StudentRecord student = new StudentRecord("IMTJO-"+i, studentName, studentDateOfBirth, studentClassList);
 			
 			i++;
 			
@@ -29,10 +29,6 @@ public class Main{
 		} //while closed
 		
 		sc.close();
-		
-		for(i=1; i<=5; i++){
-			System.out.println("ID: "+student.getId()+" | Name: "+student.getName()+" | DoB: "+student.getDateOfBirth()+" | Class List: "+student.getClassList());
-		} //for closed
 		
 	} //main closed
 	

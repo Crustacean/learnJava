@@ -27,9 +27,9 @@ public class Student{
 	
 	@Override
 	public String toString(){
-		return "Student{
-			"ID: "+id+" | Name: "+name+" | DoB: "+dateOfBirth+" | Class List: "+classList
-		}"
+		return "Student{" +
+			"ID: "+id+" | Name: "+name+" | DoB: "+dateOfBirth+" | Class List: "+classList+
+		"}";
 	}
 	
 	
