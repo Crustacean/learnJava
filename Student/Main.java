@@ -4,21 +4,36 @@ public class Main{
 	
 	public static void main(String[] args){
 		
-		for(int i=1; i<=5; i++){
-			Scanner sc = new Scanner(System.in);
+		String studentName;
+		String studentDateOfBirth;
+		String studentClassList;
+		Scanner sc = new Scanner(System.in);
+		
+		int i=1;
+		
+		while(i<=5){
 			
 			System.out.print("Enter student's name: ");
-			String studentName = sc.nextLine();
+			studentName = sc.nextLine();
 			System.out.print("Enter student's Date of Birth: ");
-			String studentDateOfBirth = sc.nextLine();
+			studentDateOfBirth = sc.nextLine();
 			System.out.print("Enter student's class list: ");
-			String studentClassList=sc.nextLine();
+			studentClassList=sc.nextLine();
 			
-			Student student = new Student(("IMTJO-"+i), studentName, studentDateOfBirth, studentClassList);
+			Student student = new Student("IMTJO-"+i, studentName, studentDateOfBirth, studentClassList);
 			
-			System.out.println("ID: "+student.getId()+" | Name: "+student.getName()+" | DoB: "+student.getDateOfBirth()+" | Class List: "+student.getClassList());
-		}
+			i++;
+			
+			System.out.println(student);
+			
+		} //while closed
 		
-	}
+		sc.close();
+		
+		for(i=1; i<=5; i++){
+			System.out.println("ID: "+student.getId()+" | Name: "+student.getName()+" | DoB: "+student.getDateOfBirth()+" | Class List: "+student.getClassList());
+		} //for closed
+		
+	} //main closed
 	
-}
+} //class closed
