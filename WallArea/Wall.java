@@ -3,9 +3,7 @@ public class Wall {
     private double width;
 	private double height;
 	
-	public Wall(){
-	    System.out.println("");
-	}
+	public Wall(){}
 	
 	public Wall(double width, double height){
 	    
