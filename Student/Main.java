@@ -16,6 +16,7 @@ public class Main{
 			
 			Student student = new Student(("IMTJO-"+i), studentName, studentDateOfBirth, studentClassList);
 			
+			System.out.println("ID: "+student.getId()+" | Name: "+student.getName()+" | DoB: "+student.getDateOfBirth()+" | Class List: "+student.getClassList());
 		}
 		
 	}
