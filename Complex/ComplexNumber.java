@@ -16,17 +16,17 @@ public class ComplexNumber {
 		this.imaginary += imaginary;
     }
     
-    public add(ComplexNumber x){
+    public void add(ComplexNumber x){
         this.real = this.real+x.real;
-		this.imaginary = this.imaginary+.imaginary
+		this.imaginary = this.imaginary+.imaginary;
     }
     
-    public subtract(double real, double imaginary){
+    public void subtract(double real, double imaginary){
         this.real -+ real;
 		this.imaginary -= imaginary;
     }
     
-    public subtract(ComplexNumber y){
+    public void subtract(ComplexNumber y){
         this.real = this.real-y.real;
 		this.imaginary = this.imaginary-y.imaginary;
     }
