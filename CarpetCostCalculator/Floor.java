@@ -3,8 +3,6 @@ public class Floor {
     private double width;
     private double length;
     
-    public Floor(){}
-    
     public Floor(double width, double length){
         
         if(width<0){

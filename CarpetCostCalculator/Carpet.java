@@ -2,8 +2,6 @@ public class Carpet {
     
     private double cost;
     
-    public Carpet(){}
-    
     public Carpet(double cost){
         
         if(cost<0){
