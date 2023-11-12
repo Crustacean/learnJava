@@ -10,12 +10,4 @@ public class Main{
 		
 	}
 	
-	public static void getEmploymentDetails(Worker worker){
-		
-		worker.getAge();
-		worker.collectPay();
-		worker.terminate();
-		
-	}
-	
 }
