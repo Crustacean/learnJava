@@ -7,4 +7,9 @@ public class Employee extends Worker {
 		super();
 	}
 	
+	public Employee(Long employeeId, String hireDate){
+		this.employeeId;
+		this.hireDate;
+	}
+	
 }
