@@ -54,7 +54,7 @@ public class Worker {
 	
 	public double collectPay() {
 		 if (getAge() <= 65 ){
-			return 179000.87;
+			return 15000.87;
 		 }else {		
 			return 0.0;	
 		 }			
