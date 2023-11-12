@@ -19,6 +19,10 @@ public class Worker {
 		
 	}
 	
+	public String toString(){
+		return name+, +birthDate+, +endDate
+	}
+	
 	public int getAge(){
 		
 		System.out.print("Enter date of birth in YYYY-MM-DD format: ");
