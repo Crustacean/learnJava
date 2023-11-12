@@ -5,22 +5,21 @@ public class Worker {
 	
 	private String name;
 	private String birthDate;
-	private String endDate;
+	protected String endDate;
 	
 	public Worker(){
 		
 	}
 	
-	public Worker(String name, String birthDate, String endDate){
+	public Worker(String name, String birthDate){
 		
-		this.name;
-		this.birthDate;
-		this.endDate;
+		this.name = name;
+		this.birthDate = birthDate;
 		
 	}
 	
 	public String toString(){
-		return name+, +birthDate+, +endDate
+		return name+", "+birthDate+", "+endDate;
 	}
 	
 	public int getAge(){
@@ -61,19 +60,7 @@ public class Worker {
 	
 	public String terminate(String endDate){
 		
-		try{
-			
-			LocalDate terminateDate = LocalDate.parse(endDate);
-			
-			if(getAge() >= 65 || terminateDate >= LocalDate.now() ){
-				System.out.println("Yes");
-			}else{
-				System.out.println("No");
-			}
-			
-		}catch(ParseException e){
-			System.out.println(endDate+" is not a valid date");
-		}
+		this.endDate = endDate;
 		
 	}
 	
