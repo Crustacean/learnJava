@@ -3,10 +3,6 @@ public class Employee extends Worker {
 	private Long employeeId;
 	private String hireDate;
 	
-	public Worker(){
-		super();
-	}
-	
 	public Employee(String name, String birthDate, Long employeeId, String hireDate){
 		super(name, birthDate);
 		this.employeeId = employeeId;
@@ -14,7 +10,7 @@ public class Employee extends Worker {
 	}
 	
 	public String toString(){
-		return super.toString()+", "+employeeId+", "+hireDate
+		return super.toString()+", "+employeeId+", "+hireDate;
 	}
 	
 }
