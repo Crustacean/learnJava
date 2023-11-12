@@ -19,46 +19,48 @@ public class Worker {
 	}
 	
 	public String toString(){
-		return name+", "+birthDate+", "+endDate;
+		return name+", "+birthDate;
 	}
 	
 	public int getAge(){
 		
-		System.out.print("Enter date of birth in YYYY-MM-DD format: ");
-		
-		Scanner scanner = new Scanner(System.in);
-		
-		String birthDate = scanner.nextLine();  
-		scanner.close(); 
-		
-		LocalDate dateOfBirth = LocalDate.parse(birthDate);
-		LocalDate currentDate = LocalDate.now();
-		
-		if ((dateOfBirth != null) && (currentDate != null)) {
+		try{
 			
-				return Period.between(dateOfBirth, currentDate).getYears();
+			LocalDate dateOfBirth = LocalDate.parse(birthDate);
+			LocalDate currentDate = LocalDate.now();
 			
+			if ((dateOfBirth != null) && (currentDate != null)) {
+				
+					return Period.between(dateOfBirth, currentDate).getYears();
+				
 			} else {
 				
 				return 0;
 			
 			}
-		
-		}
-		
-	}
-	
-	public double collectPay(){
-		
-		if(getAge()<65){
 			
-			return 176000.90;
+		}catch(Exception e){
+			
+			System.out.print("Error. Enter date of birth in YYYY-MM-DD format.");
+			
+			System.err.println("ParseException caught!");
+            e.printStackTrace();
 			
 		}
 		
+		return 0;
+		
 	}
 	
-	public String terminate(String endDate){
+	public double collectPay() {
+		 if (getAge() <= 65 ){
+			return 179000.87;
+		 }else {		
+			return 0.0;	
+		 }			
+	}
+	
+	public void terminate(String endDate){
 		
 		this.endDate = endDate;
 		
