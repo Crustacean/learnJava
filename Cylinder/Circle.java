@@ -1,4 +1,4 @@
-import java.utils.*;
+import java.util.*;
 
 public class Circle {
 	
@@ -20,6 +20,6 @@ public class Circle {
 	
 	public double getArea(){
 		return (Math.PI * Math.pow(radius, 2));
-	}	
+	}
 	
 }
