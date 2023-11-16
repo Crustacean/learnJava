@@ -7,19 +7,19 @@ public class SmartKitchen{
 	public SmartKitchen(){
 		brewMaster = new CoffeeMaker();
 		dishWasher = new DishWasher();
-		iceBox = new Refrigerator();		
+		iceBox = new Refrigerator();
 	}
 	
-	public CoffeeMaker getBrewMaster(){
-		return brewMaster;
+	public Refrigerator getIceBox(){
+		return iceBox;
 	}
 	
 	public DishWasher getDishWasher(){
 		return dishWasher;
 	}
 	
-	public Refrigerator getIceBox(){
-		return iceBox;
+	public CoffeeMaker getBrewMaster(){
+		return brewMaster;
 	}
 	
 }
@@ -38,7 +38,7 @@ class Refrigerator extends SmartKitchen{
 		
 		if(hasWorkToDo){
 			System.out.println("Cooling food...");
-			hasWorkToDo=false;
+			hasWorkToDo = false;
 		}
 	}
 	
@@ -57,7 +57,7 @@ class DishWasher extends SmartKitchen{
 	public void doDishes(){
 		if(hasWorkToDo){
 			System.out.println("Doing dishes...");
-			hasWorkToDo=false;
+			hasWorkToDo = false;
 		}
 	}
 	
@@ -76,7 +76,7 @@ class CoffeeMaker extends SmartKitchen{
 	public void brewCoffee(){
 		if(hasWorkToDo){
 			System.out.println("Brewing coffee...");
-			hasWorkToDo=false;
+			hasWorkToDo = false;
 		}
 	}
 	

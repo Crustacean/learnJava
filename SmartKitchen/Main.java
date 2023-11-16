@@ -4,13 +4,13 @@ public class Main{
 		
 		SmartKitchen kitchen = new SmartKitchen();
 		
-		kitchen.getBrewMaster().setHasWorkToDo(true);
 		kitchen.getIceBox().setHasWorkToDo(true);		
 		kitchen.getDishWasher().setHasWorkToDo(true);
+		kitchen.getBrewMaster().setHasWorkToDo(true);
 		
+		kitchen.getIceBox().orderFood();
 		kitchen.getDishWasher().doDishes();
 		kitchen.getBrewMaster().brewCoffee();
-		kitchen.getIceBox().orderFood();
 		
 	}
 	
