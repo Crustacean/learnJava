@@ -37,7 +37,7 @@ class Refrigerator extends SmartKitchen{
 	public void orderFood(){
 		
 		if(hasWorkToDo){
-			System.out.println("Cooling food.");
+			System.out.println("Cooling food...");
 			hasWorkToDo=false;
 		}
 	}
@@ -56,7 +56,7 @@ class DishWasher extends SmartKitchen{
 	
 	public void doDishes(){
 		if(hasWorkToDo){
-			System.out.println("Doing dishes.");
+			System.out.println("Doing dishes...");
 			hasWorkToDo=false;
 		}
 	}
@@ -75,7 +75,7 @@ class CoffeeMaker extends SmartKitchen{
 	
 	public void brewCoffee(){
 		if(hasWorkToDo){
-			System.out.println("Brewing coffee.");
+			System.out.println("Brewing coffee...");
 			hasWorkToDo=false;
 		}
 	}
