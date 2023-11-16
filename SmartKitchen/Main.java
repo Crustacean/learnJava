@@ -2,16 +2,16 @@ public class Main{
 	
 	public static void main(String[] args){
 		
-		SmartKitchen smartKitchen = new SmartKitchen();
+		SmartKitchen kitchen = new SmartKitchen();
 		
-		smartKitchen.getBrewMaster().setHasWorkToDo(true);
-		smartKitchen.getBrewMaster().brewCoffee();
+		kitchen.getBrewMaster().setHasWorkToDo(true);
+		kitchen.getIceBox().setHasWorkToDo(true);		
+		kitchen.getDishWasher().setHasWorkToDo(true);
 		
-		smartKitchen.getDishWasher().setHasWorkToDo(true);
-		smartKitchen.getDishWasher().doDishes();
+		kitchen.getDishWasher().doDishes();
+		kitchen.getBrewMaster().brewCoffee();
+		kitchen.getIceBox().orderFood();
 		
-		smartKitchen.getIceBox().setHasWorkToDo(true);
-		smartKitchen.getIceBox().orderFood();
 		
 	}
 	
