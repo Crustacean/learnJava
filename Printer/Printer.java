@@ -6,7 +6,7 @@ public class Printer {
 	
 	public Printer(int pagesPrinted) {
 		
-		this(20, pagesPrinted, false);
+		this(10, pagesPrinted, false);
 		
 	}
 	
@@ -32,14 +32,16 @@ public class Printer {
 	
 	public int printPages(int pages) {
 		
-		pagesPrinted += pages;
+		int jobPages = 0;
 		
 		if(duplex){
 			System.out.println("This is a duplex printer.");
-			pagesPrinted /= ((pages/2) + (pages%2));
+			jobPages += ((pages/2) + (pages%2));
+		}else{
+			jobPages += pages;
 		}
 		
-		return pagesPrinted;
+		return jobPages;
 		
 	}
 	
