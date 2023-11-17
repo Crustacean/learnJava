@@ -22,6 +22,18 @@ public class SmartKitchen{
 		return brewMaster;
 	}
 	
+	public void setKitchenState (boolean refrigeratorFlag, boolean dishWasherFlag, boolean coffeeMakerFlag){
+		iceBox.setHasWorkToDo(refrigeratorFlag);
+		dishWasher.setHasWorkToDo(dishWasherFlag);
+		brewMaster.setHasWorkToDo(coffeeMakerFlag);
+	}
+	
+	public void doKitchenWork(){
+		iceBox.orderFood();
+		dishWasher.doDishes();
+		brewMaster.brewCoffee();
+	}
+	
 }
 
 class Refrigerator {
