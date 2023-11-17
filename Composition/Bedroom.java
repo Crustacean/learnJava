@@ -28,10 +28,7 @@ public class Bedroom {
 	
 	public void makeBed() {
 		System.out.print("Bedroom -> Making bed | ");
-	}
-	
-	public Bed make() {
-		return bed;
+		bed.make();
 	}
 	
 }
