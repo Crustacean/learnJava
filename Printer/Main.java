@@ -6,7 +6,7 @@ public class Main {
 	
 		System.out.println("Toner level: " + printer.addToner(0));
 		System.out.println("Pages to be printed: " + printer.printPages(5));
-		System.out.println("Total pages printed: " + getPagesPrinted());
+		System.out.println("Total pages printed: " + printer.getPagesPrinted());
 	
 	}
 	
