@@ -36,7 +36,7 @@ public class Printer {
 		
 		if(duplex){
 			System.out.println("This is a duplex printer.");
-			pagesPrinted /= (pagesPrinted/2);
+			pagesPrinted /= ((pages/2) + (pages%2));
 		}
 		
 		return pagesPrinted;
