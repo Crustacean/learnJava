@@ -4,9 +4,9 @@ public class Printer {
 	private int pagesPrinted;
 	private boolean duplex;
 	
-	public Printer(int tonerLevel, boolean duplex) {
+	public Printer(int pagesPrinted) {
 		
-		this(20, pagesPrinted, true);
+		this(20, pagesPrinted, false);
 		
 	}
 	
