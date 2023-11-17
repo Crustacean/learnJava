@@ -1,8 +1,8 @@
 public class SmartKitchen{
 	
-	private CoffeeMaker brewMaster;
 	private DishWasher dishWasher;
 	private Refrigerator iceBox;
+	private CoffeeMaker brewMaster;
 	
 	public SmartKitchen(){
 		brewMaster = new CoffeeMaker();
@@ -24,7 +24,7 @@ public class SmartKitchen{
 	
 }
 
-class Refrigerator extends SmartKitchen{
+class Refrigerator {
 	
 	private boolean hasWorkToDo;
 	
@@ -44,7 +44,7 @@ class Refrigerator extends SmartKitchen{
 	
 }
 
-class DishWasher extends SmartKitchen{
+class DishWasher {
 	
 	private boolean hasWorkToDo;
 	
@@ -63,7 +63,7 @@ class DishWasher extends SmartKitchen{
 	
 }
 
-class CoffeeMaker extends SmartKitchen{
+class CoffeeMaker {
 	
 	private boolean hasWorkToDo;
 	
