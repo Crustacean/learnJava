@@ -14,15 +14,18 @@ public class Car {
 		
 	}
 	
-	public void drive() {
-		
-		System.out.println("Driving...");
-		
-	}
-	
 	protected void runEngine() {
 		
 		System.out.println("Engine is running...");
+		
+	}
+	
+	
+	
+	public void drive() {
+		
+		System.out.println("Driving " + getClass().getSimpleName() + " car...");
+		runEngine();
 		
 	}
 	
