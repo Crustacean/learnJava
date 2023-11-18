@@ -15,4 +15,22 @@ public class Printer {
 		this.pagesPrinted = pagesPrinted;
 	}
 	
+	public int addToner(int tonerAmount) {
+		
+		if(tonerAmount < 0 || tonerAmount > 100){
+			return -1;
+		}
+		
+		int totalTonerAmount = tonerAmount+tonerLevel;
+		
+		if(totalTonerAmount > 100) {
+			return -1;
+		}
+		
+		tonerLevel  = totalTonerAmount;
+		
+		return tonerLevel;
+		
+	}
+	
 }
