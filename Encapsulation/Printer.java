@@ -49,4 +49,8 @@ public class Printer {
 		
 	}
 	
+	public void getPagesPrinted() {
+		return pagesPrinted;
+	}
+	
 }
