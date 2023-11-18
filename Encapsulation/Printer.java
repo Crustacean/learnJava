@@ -33,4 +33,20 @@ public class Printer {
 		
 	}
 	
+	public int printPages(int pages) {
+		
+		int pagesToPrint = pages;
+		
+		if(dublex) {
+			
+			pagesToPrint = ((pagesToPrint/2) + (pagesToPrint%2));
+			
+		}
+		
+		pagesPrinted += pagesToPrint;
+		
+		return pagesToPrint;
+		
+	}
+	
 }
