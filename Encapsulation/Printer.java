@@ -37,8 +37,9 @@ public class Printer {
 		
 		int pagesToPrint = pages;
 		
-		if(dublex) {
+		if(duplex) {
 			
+			System.out.println("Printing in duplex...");
 			pagesToPrint = ((pagesToPrint/2) + (pagesToPrint%2));
 			
 		}
@@ -49,7 +50,7 @@ public class Printer {
 		
 	}
 	
-	public void getPagesPrinted() {
+	public int getPagesPrinted() {
 		return pagesPrinted;
 	}
 	
