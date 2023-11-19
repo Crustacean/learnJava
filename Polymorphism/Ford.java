@@ -1,19 +1,19 @@
 public class Ford extends Car{
 	
-	public Ford(boolean engine, int cylinders, String name, int wheels) {
-		super(engine, cylinders, name, wheels);
+	public Ford(int cylinders, String name) {
+		super(cylinders, name);
 	}
 	
-	public void startEngine() {
-		System.out.println("Starting " +getClass().getSimpleName()+ "...");
+	public String startEngine() {
+		return ("Starting " +getClass().getSimpleName()+ "...");
 	}
 	
-	public void accelerate() {
-		System.out.println("Accelerating " +getClass().getSimpleName()+ "...");
+	public String accelerate() {
+		return ("Accelerating " +getClass().getSimpleName()+ "...");
 	}
 	
-	public void brake() {
-		System.out.println("Braking " +getClass().getSimpleName()+ "...");
+	public String brake() {
+		return ("Braking " +getClass().getSimpleName()+ "...");
 	}
 	
 }

@@ -16,16 +16,16 @@ public class Car {
 		this.wheels = wheels;
 	}
 	
-	public void startEngine() {
-		System.out.println("Starting " +getClass().getSimpleName()+ "...");
+	public String startEngine() {
+		return ("Starting " +getClass().getSimpleName()+ "...");
 	}
 	
-	public void accelerate() {
-		System.out.println("Accelerating " +getClass().getSimpleName()+ "...");
+	public String accelerate() {
+		return ("Accelerating " +getClass().getSimpleName()+ "...");
 	}
 	
-	public void brake() {
-		System.out.println("Braking " +getClass().getSimpleName()+ "...");
+	public String brake() {
+		return ("Braking " +getClass().getSimpleName()+ "...");
 	}
 	
 	public int getCylinders() {
