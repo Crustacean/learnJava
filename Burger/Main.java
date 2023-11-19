@@ -11,6 +11,10 @@ public class Main {
 		salad.setSize("LARGE");
 		salad.printItem();
 		
+		Burger burger = new Burger("regular", 4.00);
+		burger.addToppings("bacon", "cheese", "mayo");
+		burger.printItem();
+		
 	}
 	
 }
