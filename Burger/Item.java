@@ -23,7 +23,7 @@ public class Item {
 		
 	}
 	
-	public doube getBasePrice() {
+	public double getBasePrice() {
 		return price;
 	}
 	
@@ -35,7 +35,7 @@ public class Item {
 			case "LARGE" -> getBasePrice() + 1;
 			default -> getBasePrice();
 			
-		}
+		};
 		
 	}
 	

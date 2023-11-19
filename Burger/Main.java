@@ -7,6 +7,10 @@ public class Main {
 		coke.setSize("LARGE");
 		coke.printItem();
 		
+		Item salad = new Item("side", "chicken salad", 11.90);
+		salad.setSize("LARGE");
+		salad.printItem();
+		
 	}
 	
 }
