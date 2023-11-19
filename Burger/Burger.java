@@ -23,7 +23,7 @@ public class Burger extends Item {
 	
 	public double getExtraPrice(String toppingName) {
 		
-		return switch {
+		return switch(toppingName) {
 			
 			case "Avocado", "Cheese" -> 1.0;
 			case "bacon", "ham", "salami" -> 1.5;
@@ -33,7 +33,7 @@ public class Burger extends Item {
 		
 	}
 	
-	public void addToppings(String extra1, String extra2, String extra3;) {
+	public void addToppings(String extra1, String extra2, String extra3) {
 		
 		this.extra1 = new Item("TOPPING", extra1, getExtraPrice(extra1));
 		this.extra2 = new Item("TOPPING", extra2, getExtraPrice(extra2));
