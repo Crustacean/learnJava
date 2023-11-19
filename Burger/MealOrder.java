@@ -23,7 +23,7 @@ public class MealOrder {
 	
 	public double getTotalPrice() {
 		
-		if(burger instanceOf DeluxeBurger) {
+		if(burger instanceof DeluxeBurger) {
 			return burger.getAdjustedPrice();
 		}
 		
@@ -34,7 +34,7 @@ public class MealOrder {
 		
 		burger.printItem();
 		
-		if(burger instanceOf DeluxeBurger) {
+		if(burger instanceof DeluxeBurger) {
 			Item.printItem(drink.getName(), 0);
 			Item.printItem(side.getName(), 0);
 		}else {
@@ -49,7 +49,7 @@ public class MealOrder {
 	
 	public void addBurgerToppings(String extra1, String extra2, String extra3, String extra4, String extra5 ) {
 		
-		if(burger instanceOf DeluxeBurger db) {
+		if(burger instanceof DeluxeBurger db) {
 			db.addToppings(extra1, extra2, extra3, extra4, extra5);
 		}else {
 			burger.addToppings(extra1, extra2, extra3);
