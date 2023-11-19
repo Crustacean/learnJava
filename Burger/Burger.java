@@ -58,7 +58,7 @@ public class Burger extends Item {
 	
 	public void printItem() {
 		printItemizedList();
-		System.out.println(".".repeat(100));
+		System.out.println("-".repeat(50));
 		super.printItem();
 	}
 	
