@@ -15,11 +15,15 @@ public class Main {
 		burger.addToppings("bacon", "cheese", "mayo");
 		burger.printItem(); */
 		
-		MealOrder regularMeal = new MealOrder();
-		
+		MealOrder regularMeal = new MealOrder();		
 		regularMeal.addBurgerToppings("bacon", "pineapple", "Tomato sauce");
 		regularMeal.setDrinkSize("large");
 		regularMeal.printItemizedList();
+		
+		MealOrder secondMeal = new MealOrder("CHICKEN", "SPRITE", "KACHUMBARI");
+		secondMeal.addBurgerToppings("Mushroom", "CHEESE", "MAYO");
+		secondMeal.setDrinkSize("SMALL");
+		secondMeal.printItemizedList();
 		
 		
 	}

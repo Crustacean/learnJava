@@ -25,7 +25,7 @@ public class Burger extends Item {
 		
 		return switch(toppingName) {
 			
-			case "Avocado", "Cheese" -> 1.0;
+			case "Avocado", "Cheese", "Mushrooms" -> 1.0;
 			case "bacon", "ham", "salami" -> 1.5;
 			default -> 0.0;
 			
@@ -43,7 +43,7 @@ public class Burger extends Item {
 	
 	public void printItemizedList() {
 		
-		printItem("base burger", getBasePrice());
+		printItem("BASE BURGER", getBasePrice());
 		if(extra1 != null) {
 			extra1.printItem();
 		}
