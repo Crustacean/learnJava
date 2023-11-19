@@ -17,15 +17,15 @@ public class Car {
 	}
 	
 	public void startEngine() {
-		System.out.println("Starting car...");
+		System.out.println("Starting " +getClass().getSimpleName()+ "...");
 	}
 	
 	public void accelerate() {
-		System.out.println("Accelerating  car...");
+		System.out.println("Accelerating " +getClass().getSimpleName()+ "...");
 	}
 	
 	public void brake() {
-		System.out.println("Car slowing down...");
+		System.out.println("Braking " +getClass().getSimpleName()+ "...");
 	}
 	
 	
