@@ -13,7 +13,7 @@ public class Main {
 		
 		Burger burger = new Burger("regular", 4.00);
 		burger.addToppings("bacon", "cheese", "mayo");
-		burger.printItem(); */
+		burger.printItem();
 		
 		MealOrder regularMeal = new MealOrder();		
 		regularMeal.addBurgerToppings("bacon", "pineapple", "Tomato sauce");
@@ -23,7 +23,12 @@ public class Main {
 		MealOrder secondMeal = new MealOrder("CHICKEN", "SPRITE", "KACHUMBARI");
 		secondMeal.addBurgerToppings("Mushroom", "CHEESE", "MAYO");
 		secondMeal.setDrinkSize("SMALL");
-		secondMeal.printItemizedList();
+		secondMeal.printItemizedList();*/
+		
+		MealOrder deluxeMeal = new MealOrder("deluxe", "Minute Maid", "gravy");
+		deluxeMeal.addBurgerToppings("lettuce", "mayo", "tomatoes", "onion rings", "sesame seeds" );
+		deluxeMeal.setDrinkSize("LARGE");
+		deluxeMeal.printItemizedList();
 		
 		
 	}
