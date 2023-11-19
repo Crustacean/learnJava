@@ -28,5 +28,15 @@ public class Car {
 		System.out.println("Braking " +getClass().getSimpleName()+ "...");
 	}
 	
+	public int getCylinders() {
+		return cylinders;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	
+	
 	
 }
