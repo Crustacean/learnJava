@@ -20,5 +20,13 @@ public class Car {
 		System.out.println("Starting car...");
 	}
 	
+	public void accelerate() {
+		System.out.println("Accelerating  car...");
+	}
+	
+	public void brake() {
+		System.out.println("Car slowing down...");
+	}
+	
 	
 }
