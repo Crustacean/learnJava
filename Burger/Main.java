@@ -2,7 +2,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Item coke = new Item("drink", "coke", 1.50);
+		/*Item coke = new Item("drink", "coke", 1.50);
 		coke.printItem();
 		coke.setSize("LARGE");
 		coke.printItem();
@@ -13,7 +13,14 @@ public class Main {
 		
 		Burger burger = new Burger("regular", 4.00);
 		burger.addToppings("bacon", "cheese", "mayo");
-		burger.printItem();
+		burger.printItem(); */
+		
+		MealOrder regularMeal = new MealOrder();
+		
+		regularMeal.addBurgerToppings("bacon", "pineapple", "Tomato sauce");
+		regularMeal.setDrinkSize("large");
+		regularMeal.printItemizedList();
+		
 		
 	}
 	
