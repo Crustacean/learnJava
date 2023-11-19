@@ -41,5 +41,26 @@ public class Burger extends Item {
 		
 	}
 	
+	public void printItemizedList() {
+		
+		printItem("base burger", getBasePrice());
+		if(extra1 != null) {
+			extra1.printItem();
+		}
+		if(extra2 != null) {
+			extra2.printItem();
+		}
+		if(extra3 != null) {
+			extra3.printItem();
+		}
+		
+	}
+	
+	public void printItem() {
+		printItemizedList();
+		System.out.println(".".repeat(100));
+		super.printItem();
+	}
+	
 	
 }
