@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class RandomArray {
 	
 	public static int[] sortArray(int length) {
