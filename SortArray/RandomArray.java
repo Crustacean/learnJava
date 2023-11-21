@@ -9,7 +9,7 @@ public class RandomArray {
 		Random random = new Random();
 		
 		for(int i=0; i<length; i++) {
-			myArray[i] = random.nextInt(50);
+			myArray[i] = random.nextInt(5);
 		}
 		
 		return myArray;
