@@ -36,11 +36,11 @@ public class MobilePhone {
 		}
 	}
 	
-	public static int findContact(Contact findContact) {
+	private static int findContact(Contact findContact) {
 		return myContacts.indexOf(findContact);
 	}
 	
-	public static int findContact(String findContact) {
+	private static int findContact(String findContact) {
 		return myContacts.indexOf(findContact);
 	}
 	
