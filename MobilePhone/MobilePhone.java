@@ -44,6 +44,14 @@ public class MobilePhone {
 		return myContacts.indexOf(findContact);
 	}
 	
+	public static Contact queryContact(String searchContact) {
+		if(myContacts.contains(searchContact)) {
+			return Contact;
+		}else {
+			return null;
+		}
+	}
+	
 	
 	
 }
