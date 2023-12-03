@@ -52,6 +52,11 @@ public class MobilePhone {
 		}
 	}
 	
-	
+	public static void printContacts() {
+		System.out.println("Contact List:");
+		for(int i=1; i<=myContacts.size(); i++) {
+			System.out.printf("%d. %d -> %d", i, myContacts.get(i));
+		}
+	}
 	
 }
