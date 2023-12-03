@@ -41,6 +41,26 @@ public class Main {
 			System.out.print("Enter command: ");
 			String command = scanner.nextLine().toUpperCase().subString(0, 1);
 			
+			switch(command) {
+				case "F":
+					System.out.println("User has selected to go Forwards.");
+					break;
+				case "B":
+					System.out.println("User has selected to go Backwards.");
+					break;
+				case "L":
+					System.out.println("User has selected to list all available places.");
+					System.out.println(placesToVisit);
+					break;
+				case "M":
+					System.out.println("User has selected to print menu items.");
+					printMenu();
+					break;
+				default:
+					quitLoop = true;
+					break;
+			}
+			
 		}
 		
 	}
