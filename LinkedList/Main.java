@@ -38,15 +38,32 @@ public class Main {
 		printMenu();
 		
 		while(!quitLoop) {
+			
+			if(!iterator.hasPrevious()) {
+				System.out.println("Origin: "+iterator.next());
+				forward = true;
+			}
+			
+			if(!iterator.hasNext()) {
+				System.out.println("Final: "+iterator.previous());
+				forward = false;
+			}
+			
 			System.out.print("Enter command: ");
 			String command = scanner.nextLine().toUpperCase().substring(0, 1);
 			
 			switch(command) {
 				case "F":
 					System.out.println("User has selected to go Forwards.");
+					if(iterator.hasNext()) {
+						System.out.println(iterator.next());
+					}
 					break;
 				case "B":
 					System.out.println("User has selected to go Backwards.");
+					if(iterator.hasPrevious()) {
+						System.out.println(iterator.previous());
+					}
 					break;
 				case "L":
 					System.out.println("User has selected to list all available places.");
