@@ -7,19 +7,20 @@ public class MobilePhone {
 	
 	public MobilePhone(String myNumber, ArrayList<Contact> myContacts){
 		this.myNumber = myNumber;
-		this.myContacts = new ArrayList<>(10);
+		this.myContacts = new ArrayList<>(Contact);
 	}
 	
 	public static boolean addNewContact(Contact contact) {
-		if(myContacts.contains(contact)){
+		if(findContact(contact.getName() < 0) ){
 			return true;
 		}else{
+			System.out.println("Contact already saved.");
 			return false;
 		}
 	}
 	
-	public static boolean updateContact(Contact existingContact, Contact updateContact) {
-		if(myContacts.contains(existingContact)){
+	public static boolean updateContact(Contact oldContact, Contact updateContact) {
+		if(findContact(oldContact) < 0) {
 			existingContact = updateContact;
 			return true;
 		}else {
@@ -41,12 +42,18 @@ public class MobilePhone {
 	}
 	
 	private static int findContact(String findContact) {
-		return myContacts.indexOf(findContact);
+		for(int i=0; i<myContacts.size(); i++) {
+			if(myContacts.get(i).getName().equals(findContact)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	
 	public static Contact queryContact(String searchContact) {
-		if(myContacts.contains(searchContact)) {
-			return Contact;
+		int position = findContact(searchContact);
+		if(position >= 0) {
+			return this.myContacts.get(position);
 		}else {
 			return null;
 		}
@@ -55,7 +62,7 @@ public class MobilePhone {
 	public static void printContacts() {
 		System.out.println("Contact List:");
 		for(int i=1; i<=myContacts.size(); i++) {
-			System.out.printf("%d. %d -> %d", i, myContacts.get(i), myContacts.get(i));
+			System.out.printf("%d. %d -> %d", i, this.myContacts.get(i).getName(), this.myContacts.get(i).getPhoneNumber());
 		}
 	}
 	
