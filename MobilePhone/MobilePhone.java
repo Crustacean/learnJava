@@ -18,4 +18,15 @@ public class MobilePhone {
 		}
 	}
 	
+	public static boolean updateContact(Contact existingContact, Contact updateContact) {
+		if(myContacts.contains(existingContact)){
+			existingContact = updateContact;
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	
+	
 }
