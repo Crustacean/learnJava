@@ -30,7 +30,7 @@ public class Main {
 		placesToVisit.addFirst(new Place("Sydney", 0));
 		System.out.println(placesToVisit);
 		
-		var iterator = placesToVisit.ListIterator();
+		var iterator = placesToVisit.listIterator();
 		Scanner scanner = new Scanner(System.in);
 		boolean quitLoop = false;
 		boolean forward = true;
@@ -39,7 +39,7 @@ public class Main {
 		
 		while(!quitLoop) {
 			System.out.print("Enter command: ");
-			String command = scanner.nextLine().toUpperCase().subString(0, 1);
+			String command = scanner.nextLine().toUpperCase().substring(0, 1);
 			
 			switch(command) {
 				case "F":
@@ -66,15 +66,13 @@ public class Main {
 	}
 	
 	private static void printMenu() {
-		private String message = """
+		System.out.println("""
 			Available actions (select word or letter):
 			(F)orward
 			(B)ackward
 			(L)ist Places
 			(M)enu
-			(Q)uit""";
-			
-		System.out.println(message);
+			(Q)uit""");
 	}
 	
 	private static void addPlace(LinkedList<Place> listOfPlaces, Place place) {
