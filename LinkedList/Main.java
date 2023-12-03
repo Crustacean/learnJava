@@ -39,7 +39,7 @@ public class Main {
 		
 		while(!quitLoop) {
 			System.out.print("Enter command: ");
-			
+			String command = scanner.nextLine().toUpperCase().subString(0, 1);
 			
 		}
 		
