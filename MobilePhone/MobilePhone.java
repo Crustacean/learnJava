@@ -10,6 +10,12 @@ public class MobilePhone {
 		this.myContacts = new ArrayList<>(10);
 	}
 	
-	
+	public static boolean addNewContact(Contact contact) {
+		if(myContacts.contains(contact)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 }
