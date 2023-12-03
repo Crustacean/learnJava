@@ -3,10 +3,13 @@ import java.util.*;
 public class MobilePhone {
 	
 	private String myNumber;
-	ArrayList<Contact> myContacts = new ArrayList<>();
+	private ArrayList<Contact> myContacts;
 	
-	public MobilePhone(String myNumber){
+	public MobilePhone(String myNumber, ArrayList<Contact> myContacts){
 		this.myNumber = myNumber;
+		this.myContacts = new ArrayList<>(10);
 	}
+	
+	
 	
 }
