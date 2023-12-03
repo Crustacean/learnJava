@@ -55,12 +55,28 @@ public class Main {
 			switch(command) {
 				case "F":
 					System.out.println("User has selected to go Forwards.");
+					
+					if(!forward) {
+						forward = true;
+						if(iterator.hasNext()) {
+							iterator.next();
+						}
+					}
+					
 					if(iterator.hasNext()) {
 						System.out.println(iterator.next());
 					}
 					break;
 				case "B":
 					System.out.println("User has selected to go Backwards.");
+					
+					if(forward) {
+						forward = false;
+						if(iterator.hasPrevious()) {
+							iterator.previous();
+						}
+					}
+					
 					if(iterator.hasPrevious()) {
 						System.out.println(iterator.previous());
 					}
