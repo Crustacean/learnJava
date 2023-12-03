@@ -1,8 +1,9 @@
 public class Main {
 	
-	public static vid main(String... args) {
+	public static void main(String... args) {
 		
-		 MobilePhone mp = new MobilePhone("12345");
+		 MobilePhone mp = new MobilePhone("0717482155");
+		 mp.printContacts();
 		
 	}
 	

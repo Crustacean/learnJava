@@ -5,18 +5,20 @@ public class MobilePhone {
 	private String myNumber;
 	private ArrayList<Contact> myContacts;
 	
-	public MobilePhone(String myNumber, ArrayList<Contact> myContacts){
+	public MobilePhone(String myNumber){
 		this.myNumber = myNumber;
 		this.myContacts = new ArrayList<Contact>();
 	}
 	
 	public boolean addNewContact(Contact contact) {
-		if(findContact(contact.getName()) < 0) {
-			return true;
-		}else{
+		if(findContact(contact.getName()) >= 0) {
 			System.out.println("Contact already saved.");
 			return false;
 		}
+		
+		myContacts.add(contact);
+		return true;
+		
 	}
 	
 	public boolean updateContact(Contact oldContact, Contact updateContact) {
@@ -69,8 +71,8 @@ public class MobilePhone {
 	
 	public void printContacts() {
 		System.out.println("Contact List:");
-		for(int i=1; i<=myContacts.size(); i++) {
-			System.out.printf("%d. %d -> %d", i, this.myContacts.get(i).getName(), this.myContacts.get(i).getPhoneNumber());
+		for(int i=0; i<myContacts.size(); i++) {
+			System.out.println((i + 1) + ". " +this.myContacts.get(i).getName() + " -> " + this.myContacts.get(i).getPhoneNumber());
 		}
 	}
 	
