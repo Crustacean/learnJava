@@ -30,6 +30,31 @@ public class Main {
 		placesToVisit.addFirst(new Place("Sydney", 0));
 		System.out.println(placesToVisit);
 		
+		var iterator = placesToVisit.ListIterator();
+		Scanner scanner = new Scanner(System.in);
+		boolean quitLoop = false;
+		boolean forward = true;
+		
+		printMenu();
+		
+		while(!quitLoop) {
+			System.out.print("Enter command: ");
+			
+			
+		}
+		
+	}
+	
+	private static void printMenu() {
+		private String message = """
+			Available actions (select word or letter):
+			(F)orward
+			(B)ackward
+			(L)ist Places
+			(M)enu
+			(Q)uit""";
+			
+		System.out.println(message);
 	}
 	
 	private static void addPlace(LinkedList<Place> listOfPlaces, Place place) {
