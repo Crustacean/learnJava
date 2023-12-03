@@ -27,6 +27,19 @@ public class MobilePhone {
 		}
 	}
 	
+	public static boolean removeContact(Contact deleteContact) {
+		if(myContacts.contains(deleteContact)){
+			myContacts.remove(deleteContact);
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public static int findContact(Contact findContact) {
+		return myContacts.indexOf(findContact);
+	}
+	
 	
 	
 }
