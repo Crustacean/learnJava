@@ -40,6 +40,10 @@ public class MobilePhone {
 		return myContacts.indexOf(findContact);
 	}
 	
+	public static int findContact(String findContact) {
+		return myContacts.indexOf(findContact);
+	}
+	
 	
 	
 }
