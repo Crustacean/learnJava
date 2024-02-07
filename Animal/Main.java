@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main{
 	
 	public static void main(String[] args) {
@@ -6,6 +8,19 @@ public class Main{
 		dog.makeNoise();
 		
 		doAnimalStuff(dog);
+		
+		ArrayList<Animal> animals = new  ArrayList<>();
+		
+		animals.add(dog);
+		animals.add(new Dog("Germanshepherd", "small", 150));
+		animals.add(new Dog("Akita", "large", 150));
+		animals.add(new Fish("Shark", "big", 200));
+		animals.add(new Fish("Goldfish", "small", 1));
+		
+		for(Animal animal : animals) {
+			doAnimalStuff(animal);
+		}
+		
 		
 	}
 	
