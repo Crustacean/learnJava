@@ -8,7 +8,9 @@ public class Main {
 			
 			for (int i=0; i<lastUnsortedIndex; i++) {
 				
-				
+				if (intArray[i] > intArray[i+1] ) {
+					swap(intArray, i, i+1);
+				}
 				
 			}
 			
