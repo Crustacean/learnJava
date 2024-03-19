@@ -4,7 +4,7 @@ public class Main {
 		
 		int[] intArray = {20, 35, 7, 89, 12, -1, 0, 89};
 		
-		for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex < 0; lastUnsortedIndex--) {
+		for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
 			
 			for (int i=0; i<lastUnsortedIndex; i++) {
 				
