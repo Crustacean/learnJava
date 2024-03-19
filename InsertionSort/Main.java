@@ -14,6 +14,7 @@ public class Main {
 				intArray[i] = intArray[i-1];
 			}
 			
+			intArray[i] = newElement;			
 			
 		}
 		
