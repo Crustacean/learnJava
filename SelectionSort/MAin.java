@@ -20,6 +20,8 @@ public class Main {
 			
 		}
 		
+		printArray(intArray);
+		
 	}
 	
 	public static void swap(int[] array, int i, int j) {
